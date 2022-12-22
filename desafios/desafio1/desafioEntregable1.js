@@ -75,3 +75,23 @@ console.log("Busqueda de producto: ",productManager.getProductById(2));
 
 // Busca el producto de id 100 y avisa que no existe
 productManager.getProductById(100)
+
+
+/* class ProductManager {
+    constructor(){
+        this.products = cargarDelArchivo();
+
+    }
+
+    addProduct() {
+        this.guardarCambios()
+
+    }
+    guardarCambios() {
+        fs.writeFile("productos.json", JSON.stringify(this.products))
+
+    }
+    cargarDelArchivo() {
+        fs.readFile
+    }
+} */
