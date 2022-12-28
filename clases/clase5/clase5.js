@@ -1,4 +1,4 @@
-// CLASE 4, Administrador de Paquetes - NPM
+// CLASE 5, Administrador de Paquetes - NPM
 
              //ADMINISTRADORES DE PAQUETES
 
