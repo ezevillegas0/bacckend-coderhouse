@@ -50,7 +50,7 @@ class ProductManager {
         });
       });
     }
-    getproducts() {
+    getProducts() {
       return new Promise((resolve, reject) => {
         fs.readFile(this.file, "utf-8", (err, data) => {
           if (err) {
@@ -60,6 +60,7 @@ class ProductManager {
           resolve(this.products);
         });
       });
+      
     }
   
     deleteProductById(id) {
