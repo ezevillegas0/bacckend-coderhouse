@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/ezevillegas0/backend-coderhouse/issues"
   },
-  "homepage": "https://github.com/ezevillegas0/backend-coderhouse#readme"
+  "homepage": "https://github.com/ezevillegas0/backend-coderhouse#readme",
+  "devDependencies": {},
+  "keywords": []
 }

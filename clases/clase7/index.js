@@ -94,17 +94,19 @@ app.get('/compras', (req, res) => {
     res.send(compras)
 });
 
-app.put('/compras/:id', (req, res) => {
-    console.log(req.body)
-    console.log(req.params.id)
-    let compraAActualizarIndex = compras.findIndex(c => c.id === req.params.id)
-    compras[compraAActualizarIndex] = {
-        id: req.params.id,
-        nombre: req.body.nombre,
-    }
-    res.send("producto actualizado!")
+app.put("/compras/:id", (req, res) => {
+    compraId = compras.findIndex((c) => c.id === +req.params.id);
+    compras[compraId] = {
+      id: req.params.id,
+      nombre: req.body.nombre,
+    };
+    res.send("producto actualizado!");
 });
 
+app.delete("/compras/:id", (req, res) => {
+    compras = compras.filter((c) => c.id !== +req.params.id);
+    res.send("Producto eliminado");
+});
 
 const PORT = 8080;
 app.listen(PORT, () => {
