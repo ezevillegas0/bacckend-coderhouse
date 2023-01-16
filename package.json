@@ -1,8 +1,8 @@
 {
-  "name": "fs_sinc",
+  "name": "proyecto.backend",
   "version": "1.0.0",
-  "description": "paquete npm para aprender file system sincronico",
-  "main": "fs_sinc.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +16,11 @@
     "url": "https://github.com/ezevillegas0/backend-coderhouse/issues"
   },
   "homepage": "https://github.com/ezevillegas0/backend-coderhouse#readme",
-  "devDependencies": {},
-  "keywords": []
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "workspaces":[
+    "clases/clase9",
+    "clases/clase8"
+  ]
 }
