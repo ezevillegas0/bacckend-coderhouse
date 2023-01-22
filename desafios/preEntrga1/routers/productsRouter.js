@@ -15,8 +15,13 @@ productsRouter.get('/:id', async (req, res) => {
 });
 
 productsRouter.post('/', async (req, res) => {
-    let product = req.body;
-    res.json(await ProductManager.addProduct(product));
+    try {
+        let product = req.body;
+        const response = await ProductManager.addProduct(product)
+        res.status(200).json.apply(response)
+    } catch (error) {
+        res.status(404).send('no se puede subir el producto')
+    }
 });
 
 productsRouter.put('/:id', async (req, res) => {
