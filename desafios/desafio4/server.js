@@ -4,8 +4,8 @@ const http = require('http');
 const { Server } = require('socket.io');
 /*  */
 const app = express();
-const server = http.createServer(app)
-const io = new Server(server);
+const httpServer = http.createServer(app)
+const io = new Server(httpServer);
 /*  */
 const cartsRouter = require('./routes/cartsRouter');
 const productsRouter = require('./routes/productsRouter');
@@ -30,6 +30,6 @@ io.listen('connection', (socket) => {
     });
 });
 /*  */
-server.listen(port, () => {
+httpServer.listen(PORT, () => {
     console.log("Listening on 8080")
 });
