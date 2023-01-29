@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "iara",
+        "especie": "calle",
+        "edad": "4"
+    },
+    {
+        "nombre": "arturo",
+        "especie": "salchicha",
+        "edad": "14"
+    },
+    {
+        "nombre": "miel",
+        "especie": "calle",
+        "edad": "3"
+    }
+]
