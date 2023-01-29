@@ -1,10 +1,9 @@
-const socket = io(); 
+const socket = io();
 let username = prompt('ingrese su nombre');
 /* enviar mensaje de que se conecto un nuevo cliente */
-socket.emit('nuevoCliente', {username});
+socket.emit('nuevoCliente', { username });
 
-const chatBox = document.getElementById('chatBox');
-chatBox.addEventListener("keyup", (evt) => {
+/* chatBox.addEventListener("keyup", (evt) => {
     if (evt.key === "Enter") {
         if (chatBox.value.trim().lenght) {
             const mensaje = chatBox.value;
@@ -15,9 +14,18 @@ chatBox.addEventListener("keyup", (evt) => {
             });
         }
     }
+}); */
+
+chatBox.addEventListener("keyup", (evt) => {
+    if (evt.key === "Enter") {
+        if (chatBox.value.trim().lenght > 0) {
+            socket.emit("message", { user, message: chatBox.value });
+        }
+    }
 });
 
-/* no me toma el evento del enter */
+const chatBox = document.getElementById('chatBox');
+
 const messageLogsEl = document.getElementById('messageLogs');
 socket.on('mensajes', (data) => {
     let messages = "";
